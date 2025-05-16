@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>    
+    <link rel="stylesheet" href="Portfolio.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Cyber_Specter</a>
+
+       <nav>
+         <a href=""><img src=""></a>
+         <div class="nav-links">
+             <ul>
+                 <li><a href="Home.html">HOME</a></li>
+                 <li><a href="">PORTFOLIO</a></li>
+                 <li><a href="">EXPERIENCES</a></li>
+                 <li><a href="Work.html">WORKS</a></li>
+                 <li><a href="">SOCIALS</a></li>
+             </ul>
+            
+         </div>
+         </nav>
+         
+    </header>
+    
+    <!-- Main Content -->
+    <section class="home">
+        <div class="home-img">
+            <img src="images/Main.jpg" alt="Cyber_Specter">
+            <div class="home-content">
+                <h1>Hi It's <span>Cyber_Specter</span></h1>
+                <h3 class="typing-text">I'm a <span></span></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti tempora iure nostrum vitae rerum perferendis corporis optio excepturi? Eos voluptate rerum corrupti dolorum minus. Consequatur ab labore laborum ipsam eum!</p>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-envelope"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="https://youtube.com/@cyber0specter?si=SScc-cSTAqJnas41"><i class="fa fa-youtube-play"></i></a>
+                </div>
+
+                <a href="#" class="btn">Contact Me</a>
+
+                <!-- Autoplay Audio -->
+                <div class="audio-container">
+                    <audio id="bg-audio" src="Musics/LET THE WORLD BURN - Chris Grey.mp3" autoplay loop></audio>
+                    <button id="audio-btn" onclick="toggleAudio()">
+                        <i id="audio-icon" class="fa fa-pause"></i>
+                    </button>
+                    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5" onchange="changeVolume(this.value)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>CyberCode Academy empowers learners with cutting-edge tech skills through hands-on projects and expert guidance.<br>Join us to code, create, and shape the future!</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-youtube"></i>
+        </div>
+        <p>Made With <i class="fa fa-heart-o"></i> By Cyber Specter</p>
+    </section>
+
+    <!-- Audio Controls Script -->
+    <script>
+        const audio = document.getElementById("bg-audio");
+        const audioBtn = document.getElementById("audio-btn");
+        const audioIcon = document.getElementById("audio-icon");
+        const volumeSlider = document.getElementById("volume-slider");
+
+        // Set initial volume
+        audio.volume = 0.5;
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+                audioIcon.classList.remove("fa-play");
+                audioIcon.classList.add("fa-pause");
+            } else {
+                audio.pause();
+                audioIcon.classList.remove("fa-pause");
+                audioIcon.classList.add("fa-play");
+            }
+        }
+
+        function changeVolume(value) {
+            audio.volume = value;
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>
